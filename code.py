@@ -29,5 +29,5 @@ def action(data):
     logger.info("AFTER SUM: data is a dataframe of shape %s", str(data.shape))
     
     # Yield one JSON-serializable object, such as a dict, or an array of dicts, etc.
-    yield data.to_dict(orient="records")
+    yield data
     
