@@ -1,0 +1,26 @@
+{
+   "type": "record",
+   "name": "inferred_schema",
+   "fields": [
+      {
+         "name": "a",
+         "type": "int",
+         "dataClass": "numerical",
+         "role": "predictor",
+         "protectedClass": false,
+         "driftCandidate": true,
+         "specialValues": [],
+         "scoringOptional": false
+      },
+      {
+         "name": "b",
+         "type": "int",
+         "dataClass": "numerical",
+         "role": "predictor",
+         "protectedClass": false,
+         "driftCandidate": true,
+         "specialValues": [],
+         "scoringOptional": false
+      }
+   ]
+}
