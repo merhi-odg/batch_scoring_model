@@ -1,5 +1,5 @@
-# modelop.slot.0: in-use
-# modleop.slot.1: in-use
+# modelop.schema.0: input_schema.avsc
+# modleop.schema.1: output_schema.avsc
 
 import logging
 import pandas
