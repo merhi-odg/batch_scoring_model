@@ -27,4 +27,5 @@ def action(data):
 
     logger.info("AFTER SUM: data is a dataframe of shape %s", str(data.shape))
 
-    yield data
+    for row in json.loads(data.to_json(orient='records')):
+        yield row
