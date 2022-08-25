@@ -1,5 +1,7 @@
 # modelop.schema.0: input_schema.avsc
 # modelop.schema.1: output_schema.avsc
+# modelop.recordsets.0: true
+# modelop.recordsets.1: true
 
 import logging
 import pandas
