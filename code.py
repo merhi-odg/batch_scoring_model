@@ -23,7 +23,7 @@ def action(data):
     logger.info("BEFORE SUM: data is a dataframe of shape %s", str(data.shape))
 
     # Add a sum column for all rows at-once
-    data["rown_sum"] = data["a"] + data["b"]
+    data["row_sum"] = data["a"] + data["b"]
 
     logger.info("AFTER SUM: data is a dataframe of shape %s", str(data.shape))
 
