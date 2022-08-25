@@ -20,27 +20,6 @@ def begin():
 
 # modelop.score
 def action(data):
-    
-    # MOC can accomodate different encodings on input data.
-    
-    if isinstance(data, List):
-        # Data is provided as an array of dictionaries, such as [{"a":1, "b":2}, {"a":3, "b":4}]
-        # All records will be processed at-once
-        data = pandas.DataFrame(data)
-
-    elif isinstance(data, Dict):
-        # Data is provided as a dictionary, such as {"a":1, "b":2}. In MOC, the input could consist on one-line records such as
-        """
-        {"a":1, "b":2}
-        {"a":3, "b":4}
-        """
-        # The scoring function will run once for every record/line (processing one record at-a-time)
-        data = pandas.DataFrame([data])
-        
-    else:
-        logger.error(
-            "Input data must be either a record(dictionary) or an array of records!"
-        )
         
     logger.info("BEFORE SUM: data is a dataframe of shape %s", str(data.shape))
     
