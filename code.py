@@ -27,6 +27,7 @@ def action(data):
     data["row_sum"] = data["a"] + data["b"]
 
     logger.info("AFTER SUM: data is a dataframe of shape %s", str(data.shape))
-
-    for row in json.loads(data.to_json(orient='records')):
-        yield row
+    
+    # For CSV output, iterate through rows of dataframe, and yield dictionaries
+    for _, row in data.iterrows():
+        yield dict(row)
