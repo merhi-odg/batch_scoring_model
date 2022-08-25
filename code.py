@@ -1,5 +1,5 @@
 # modelop.slot.0: in-use
-# modleop.slot.1: in-use
+# modelop.slot.1: in-use
 
 import logging
 import pandas
