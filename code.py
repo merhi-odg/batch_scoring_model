@@ -1,5 +1,5 @@
 # modelop.schema.0: input_schema.avsc
-# modleop.schema.1: output_schema.avsc
+# modelop.schema.1: output_schema.avsc
 
 import logging
 import pandas
