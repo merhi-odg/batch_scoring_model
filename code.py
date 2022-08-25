@@ -5,7 +5,6 @@
 
 import logging
 import pandas
-from typing import List, Dict
 
 logger = logging.getLogger(__name__)
 logging.basicConfig(level="INFO")
@@ -13,7 +12,7 @@ logging.basicConfig(level="INFO")
 # modelop.init
 def begin():
     
-    # Unpickle any binaries if you have any in the scoe of the init function
+    # Unpickle any binaries if you have any in the scope of the init function
     # This is also a good place to declare any global variables
     pass
 
@@ -28,6 +27,4 @@ def action(data):
     
     logger.info("AFTER SUM: data is a dataframe of shape %s", str(data.shape))
     
-    # Yield one JSON-serializable object, such as a dict, or an array of dicts, etc.
     yield data
-    
