@@ -19,7 +19,7 @@ def begin():
 # modelop.score
 def action(data):
     
-    # MOC can accomodate different encodings on input data.
+    # MOC can accomodate different formats/types of input data.
     
     if isinstance(data, List):
         # Data is provided as an array of dictionaries, such as [{"a":1, "b":2}, {"a":3, "b":4}]
@@ -27,7 +27,7 @@ def action(data):
         data = pandas.DataFrame(data)
 
     elif isinstance(data, Dict):
-        # Data is provided as a dictionary, such as {"a":1, "b":2}. In MOC, the input could consist on one-line records such as
+        # Data is provided as a dictionary, such as {"a":1, "b":2}. The input data could consist of one-line JSON records such as
         """
         {"a":1, "b":2}
         {"a":3, "b":4}
@@ -47,6 +47,6 @@ def action(data):
     
     logger.info("AFTER SUM: data is a dataframe of shape %s", str(data.shape))
     
-    # Yield one JSON-serializable object, such as a dict, or an array of dicts, etc.
+    # return one JSON-serializable object, such as a dict, or an array of dicts, etc.
     yield data.to_dict(orient="records")
     
