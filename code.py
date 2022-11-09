@@ -11,7 +11,7 @@ logging.basicConfig(level="INFO")
 # modelop.init
 def begin():
     
-    # Unpickle any binaries if you have any in the scoe of the init function
+    # Unpickle any binaries if you have any in the scope of the init function
     # This is also a good place to declare any global variables
     pass
 
@@ -27,7 +27,8 @@ def action(data):
         data = pandas.DataFrame(data)
 
     elif isinstance(data, Dict):
-        # Data is provided as a dictionary, such as {"a":1, "b":2}. The input data could consist of one-line JSON records such as
+        # Data is provided as a dictionary, such as {"a":1, "b":2}. 
+        # The input data could consist of one-line JSON records such as
         """
         {"a":1, "b":2}
         {"a":3, "b":4}
@@ -48,5 +49,5 @@ def action(data):
     logger.info("AFTER SUM: data is a dataframe of shape %s", str(data.shape))
     
     # return one JSON-serializable object, such as a dict, or an array of dicts, etc.
-    yield data.to_dict(orient="records")
+    return data.to_dict(orient="records")
     
